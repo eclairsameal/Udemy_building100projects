@@ -1,6 +1,6 @@
 import random
-
-#Step 4 
+import hangman_words
+#Step 5
 stages = ['''
   +---+
   |   |
@@ -57,10 +57,11 @@ stages = ['''
       |
 =========
 ''']
-
-word_list = ["aardvark", "baboon", "camel"]
+#TODO-1: - Update the word list to use the 'word_list' from hangman_words.py
+# Delete this line: word_list = ["aardvark", "baboon", "camel"]
+word_list = hangman_words.word_list
 chosen_word = random.choice(word_list)
-chosen_word = random.choice(word_list)
+print(f'Pssst, the solution is {chosen_word}.')
 #TODO-1: - Create a variable called 'lives' to keep track of the number of lives left. 
 #Set 'lives' to equal 6.
 lives = 6
