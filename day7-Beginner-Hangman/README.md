@@ -10,11 +10,18 @@
 ## code
 
 ### Step 1 
+
 亂數在list中選一個單字(chosen_word)
+
 個別判斷chosen_word的字母跟使用者輸入的字母有符合嗎
+
 ![](https://i.imgur.com/bym4hjz.png)
 
 ### Step 2
+
+將判斷以 ```["_", "_", "_", "_", "_"]``` 的方式表示
+
+![](https://i.imgur.com/OdNaIat.png)
 
 ### Step 3
 
