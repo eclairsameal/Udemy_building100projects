@@ -18,13 +18,18 @@ print(" ".join(display))
 end_of_game = False
 while not end_of_game:
     guess = input("guess a letter:").lower()
-
+    #TODO-4: - If the user has entered a letter they've already guessed, print the letter and let them know.
+    if guess in chosen_word:
+        end_of_game = True
+        print("You've already guessed {}.".format(guess))
     #Check guessed letter
     for i in range(len(chosen_word)):
         if chosen_word[i] == guess:
             display[i] = guess
 
     if not guess in chosen_word:
+        #TODO-5: - If the letter is not in the chosen_word, print out the letter and let them know it's not in the word.
+        print("You guessed {},.that's not in the word. You lose a life.".format(guess))
         lives -= 1
     if lives == 0:
         end_of_game = True
