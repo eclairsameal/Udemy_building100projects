@@ -25,6 +25,10 @@
 
 ### Step 3
 
+完成直到猜對所有字母的while遊戲循環
+
+![](https://i.imgur.com/QjdeNg3.png)
+
 ### Step 4
 
 ### Step 5
