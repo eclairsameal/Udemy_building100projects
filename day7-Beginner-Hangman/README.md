@@ -30,5 +30,10 @@
 ![](https://i.imgur.com/QjdeNg3.png)
 
 ### Step 4
+加上上吊人的機制(輸的判定)跟畫出上吊人的 ASCII art
+
+![](https://i.imgur.com/WrAstVQ.png)
 
 ### Step 5
+* 完善使用者體驗
+* 將單字跟ASCII art拆成模組
