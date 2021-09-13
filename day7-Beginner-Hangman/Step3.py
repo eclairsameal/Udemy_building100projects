@@ -4,7 +4,7 @@ import random
 
 word_list = ["aardvark", "baboon", "camel"]
 chosen_word = random.choice(word_list)
-
+#chosen_word = random.choice(word_list)
 #Create blanks
 display = ["_"for i in range(len(chosen_word))]
 print(display)
