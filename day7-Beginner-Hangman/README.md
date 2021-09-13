@@ -5,3 +5,19 @@
 [web](https://hangmanwordgame.com/?fca=1&success=0#/)
 
 ![](https://i.imgur.com/RojI5hR.png)
+
+
+## code
+
+### Step 1 
+亂數在list中選一個單字(chosen_word)
+個別判斷chosen_word的字母跟使用者輸入的字母有符合嗎
+![](https://i.imgur.com/bym4hjz.png)
+
+### Step 2
+
+### Step 3
+
+### Step 4
+
+### Step 5
