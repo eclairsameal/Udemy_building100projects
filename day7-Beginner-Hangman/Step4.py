@@ -60,7 +60,7 @@ stages = ['''
 
 word_list = ["aardvark", "baboon", "camel"]
 chosen_word = random.choice(word_list)
-chosen_word = random.choice(word_list)
+# print(f'Pssst, the solution is {chosen_word}.')
 #TODO-1: - Create a variable called 'lives' to keep track of the number of lives left. 
 #Set 'lives' to equal 6.
 lives = 6
