@@ -61,3 +61,9 @@ The encoded text is helloaz
 優化程式碼
 
 [caesar-cipher-3-start](https://replit.com/@appbrewery/caesar-cipher-3-start)
+
+### caesar-cipher-4
+
+提高使用者體驗 and 防呆
+
+[caesar-cipher-4-start](https://replit.com/@appbrewery/caesar-cipher-4-start)
