@@ -14,6 +14,8 @@
 
 ### caesar-cipher-1
 
+Encryption
+
 [caesar-cipher-1-start](https://replit.com/@appbrewery/caesar-cipher-1-start)
 
 ```
@@ -29,3 +31,9 @@ The encoded text is: hnanqnefynts
 🐛Bug alert: What happens if you try to encode the word 'civilization'?🐛
 
 'civilization' 中有 z 直接加 shift 的值會超出 list 的範圍
+
+### caesar-cipher-2
+
+Decrypt
+
+[caesar-cipher-2](https://replit.com/@appbrewery/caesar-cipher-2-start)
