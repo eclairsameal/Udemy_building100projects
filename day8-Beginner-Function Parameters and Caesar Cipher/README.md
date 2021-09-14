@@ -37,3 +37,21 @@ The encoded text is: hnanqnefynts
 Decrypt
 
 [caesar-cipher-2](https://replit.com/@appbrewery/caesar-cipher-2-start)
+
+```
+Type 'encode' to encrypt, type 'decode' to decrypt:
+encode
+Type your message:
+helloaz
+Type the shift number:
+5
+The encoded text is: mjqqtfe
+
+Type 'encode' to encrypt, type 'decode' to decrypt:
+decode
+Type your message:
+mjqqtfe
+Type the shift number:
+5
+The encoded text is helloaz
+```
