@@ -19,7 +19,7 @@ end_of_game = False
 while not end_of_game:
     guess = input("guess a letter:").lower()
     #TODO-4: - If the user has entered a letter they've already guessed, print the letter and let them know.
-    if guess in chosen_word:
+    if guess == chosen_word:
         end_of_game = True
         print("You've already guessed {}.".format(guess))
     #Check guessed letter
