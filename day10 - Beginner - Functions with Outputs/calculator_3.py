@@ -38,4 +38,4 @@ while should_continue:
     if input(f"Type 'y' to continue calculating with {answer}:, or type 'n' to exit.:") == "y":
         num1 = answer
     else:
-        should_continue = False
+        should_continue = False 
