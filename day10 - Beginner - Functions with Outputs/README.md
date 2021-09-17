@@ -34,3 +34,31 @@ Pick another operation: -
 What's the next number?: 15
 30 - 15 = 15
 ```
+
+## calculator - 3
+
+持續計算
+
+```
+What's the first number?:10
++
+-
+*
+/
+Pick an operation: +
+What's the next number?:20
+10 + 20 = 30
+Type 'y' to continue calculating with 30:, or type 'n' to exit.:y
+Pick an operation: -
+What's the next number?:15
+30 - 15 = 15
+Type 'y' to continue calculating with 15:, or type 'n' to exit.:y
+Pick an operation: *
+What's the next number?:2
+15 * 2 = 30
+Type 'y' to continue calculating with 30:, or type 'n' to exit.:y
+Pick an operation: /
+What's the next number?:10
+30 / 10 = 3.0
+Type 'y' to continue calculating with 3.0:, or type 'n' to exit.:n
+```
