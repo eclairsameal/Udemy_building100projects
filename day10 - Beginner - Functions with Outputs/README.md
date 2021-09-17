@@ -66,3 +66,11 @@ Type 'y' to continue calculating with 3.0:, or type 'n' to exit.:n
 ## calculator - 4 (遞迴)
 
 重新計算
+
+## calculator - 5
+
+加上 logo
+
+修繕 bug (輸入浮點數會錯)
+
+[calculator-final](https://replit.com/@appbrewery/calculator-final)
