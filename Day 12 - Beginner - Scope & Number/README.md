@@ -16,3 +16,9 @@ def increase_enemies():
 ```
 
 ## [ASCII art](http://patorjk.com/software/taag/#p=display&f=Slant&t=Number%20Guessing)
+
+## Number Guessing Game
+
+[guess-the-number-start](https://replit.com/@appbrewery/day-12-start#main.py)
+
+[guess-the-number-final](https://replit.com/@appbrewery/guess-the-number-final#main.py)
