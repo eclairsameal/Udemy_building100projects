@@ -14,3 +14,5 @@ def increase_enemies():
     enemies = increase_enemies()
     print(f"enemies outside function: {enemies}")
 ```
+
+## [ASCII art](http://patorjk.com/software/taag/#p=display&f=Slant&t=Number%20Guessing)
