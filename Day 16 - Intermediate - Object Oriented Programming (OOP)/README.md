@@ -22,3 +22,9 @@ A simple Python library for easily displaying tabular data in a visually appeali
 可以查詢原始碼
 
 ![](https://i.imgur.com/SBZpV4V.png)
+
+## Coffee Machine - OOP
+
+[oop-coffee-machine-start](https://replit.com/@appbrewery/oop-coffee-machine-start)
+
+[Coffee Machine Documentation](https://docs.google.com/document/d/e/2PACX-1vTragRHILyj76AvVgpWeOlEaLBXoxPM_43SdEyffIKtOgarj42SoSAsK6LwLAdHQs2qFLGthRZds6ok/pub)
