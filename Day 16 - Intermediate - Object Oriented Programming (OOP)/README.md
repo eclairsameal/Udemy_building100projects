@@ -18,3 +18,7 @@ The Python Package Index (PyPI) is a repository of software for the Python progr
 [prettytable - wiki](https://code.google.com/archive/p/prettytable/wikis/Tutorial.wiki)
 
 A simple Python library for easily displaying tabular data in a visually appealing ASCII table format
+
+可以查詢原始碼
+
+![](https://i.imgur.com/SBZpV4V.png)
