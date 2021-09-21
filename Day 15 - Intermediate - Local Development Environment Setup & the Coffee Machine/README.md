@@ -10,6 +10,8 @@
 
 [執行結果](https://replit.com/@appbrewery/coffee-machine-final?embed=1&output=1#main.py)
 
+[coffee-machine-final](https://replit.com/@appbrewery/coffee-machine-final)
+
 ### Coffee Machine Program Requirements
 
 1. Prompt user by asking “What would you like? (espresso/latte/cappuccino):”
