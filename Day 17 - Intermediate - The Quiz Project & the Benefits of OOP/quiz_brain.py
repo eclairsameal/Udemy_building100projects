@@ -11,7 +11,7 @@ class QuizBrain():
         else:
             return False
         """
-        
+
     def next_question(self):
         current_question = self.question_list[self.question_number]
         self.question_number += 1

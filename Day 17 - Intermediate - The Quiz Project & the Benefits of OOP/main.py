@@ -8,4 +8,5 @@ for q in question_data:
     question_bank.append(new_question)
 
 quit = QuizBrain(question_bank)
-quit.next_question()
+while quit.still_has_question():
+    quit.next_question()
