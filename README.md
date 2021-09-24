@@ -1,2 +1,1 @@
-# Udemy_building100projects
-Master Python by building 100 projects in 100 days. Learn to build websites, games, apps, plus scraping and data science
+# Day 18 - Intermediate - Turtle & the Graphical User Interface (GUI)
