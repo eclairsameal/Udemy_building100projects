@@ -1,14 +1,12 @@
-from turtle import Turtle, Screen
+import turtle as t
 
-turtle = Turtle()
-turtle.shape("turtle")
-turtle.color("DarkBlue")
+turtle = t.Turtle()
 
-""" draw a square
-for _ in range(4):
-    turtle.forward(100)
-    turtle.right(90)
-"""
+for _ in range(15):
+    turtle.forward(10)
+    turtle.up()
+    turtle.forward(10)
+    turtle.down()
 
-screen = Screen()
+screen = t.Screen()
 screen.exitonclick()
