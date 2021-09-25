@@ -54,9 +54,8 @@ while game_is_on:
 ## Step 2.5 - Create a Snake Class & Move to OOP
 
 * Snake
-* Food
-* Scoreboard
+* main
 
-## Step 3 - Create snake food
+
 
 
