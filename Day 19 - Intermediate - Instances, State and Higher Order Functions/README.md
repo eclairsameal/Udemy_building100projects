@@ -2,6 +2,8 @@
 
 [turtle.listen](https://docs.python.org/3/library/turtle.html#turtle.listen)
 
+[Input methods](https://docs.python.org/3.1/library/turtle.html#turtle.textinput)
+
 ## Higher Order Functions
 
 可以跟其他Function一起工作的Function，被稱為高階Function
