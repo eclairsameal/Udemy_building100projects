@@ -12,3 +12,7 @@
 ## Random walk
 
 [wiki](https://en.wikipedia.org/wiki/Random_walk)
+
+[Random Walk - end](https://replit.com/@appbrewery/day-18-4-end)
+
+[Colors RGB](https://www.w3schools.com/colors/colors_rgb.asp)
