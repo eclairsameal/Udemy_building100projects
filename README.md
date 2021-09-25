@@ -22,3 +22,9 @@
 [Draw a Spirograph - start](https://replit.com/@appbrewery/day-18-5-start)
 
 [Draw a Spirograph - end](https://replit.com/@appbrewery/day-18-5-end)
+
+## spot pain
+
+[colorgram.py](https://pypi.org/project/colorgram.py/)
+
+[hirst_painting-final](https://replit.com/@appbrewery/hirstpainting-final)
