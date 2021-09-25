@@ -16,3 +16,9 @@
 [Random Walk - end](https://replit.com/@appbrewery/day-18-4-end)
 
 [Colors RGB](https://www.w3schools.com/colors/colors_rgb.asp)
+
+## Draw a Spirograph
+
+[Draw a Spirograph - start](https://replit.com/@appbrewery/day-18-5-start)
+
+[Draw a Spirograph - end](https://replit.com/@appbrewery/day-18-5-end)
