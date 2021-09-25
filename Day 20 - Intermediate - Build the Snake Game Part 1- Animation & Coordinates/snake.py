@@ -24,16 +24,16 @@ class Snake:
             new_x = self.body_list[body_num - 1].xcor()
             new_y = self.body_list[body_num - 1].ycor()
             self.body_list[body_num].goto(new_x, new_y)
-        self.body_list[0].forward(MOVE_DISTANCE)
+        self.head.forward(MOVE_DISTANCE)
 
     def up(self):
-        self.body_list[0].setheading(90)
+        self.head.setheading(90)
 
     def down(self):
-        self.body_list[0].setheading(270)
+        self.head.setheading(270)
 
     def left(self):
-        self.body_list[0].setheading(180)
+        self.head.setheading(180)
 
     def right(self):
-        self.body_list[0].setheading(0)
+        self.head.setheading(0)
