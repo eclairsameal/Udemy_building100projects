@@ -24,7 +24,7 @@ scoreboard = Scoreboard()
 game_is_on = True
 while game_is_on:
     screen.update()
-    time.sleep(0.1)
+    time.sleep(ball.move_speed)
     ball.move()
     # Detect collision with wall
     if ball.ycor() > 280 or ball.ycor() < -280:

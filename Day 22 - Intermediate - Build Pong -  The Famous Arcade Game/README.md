@@ -18,6 +18,8 @@ Detect when paddle misses
 
 Keep score
 
+* Control the ball speed
+
 ## Create the screen
 
 width=800
@@ -77,4 +79,15 @@ ball.distance(r_paddle) < 50 and ball.xcor() > 320 or ball.distance(l_paddle) < 
 ball.xcor() < -380 or ball.xcor() > 380 成立代表球漏接，要重新發球(往反方向)，
 
 * 上述判斷拆成2個 if 方便計分。
+
+## Keep score
+
+跟上個專案一樣
+
+## Control the ball speed
+
+self.move_speed *= 0.9
+
+加快速度的同時保持數值不為負數
+
 
