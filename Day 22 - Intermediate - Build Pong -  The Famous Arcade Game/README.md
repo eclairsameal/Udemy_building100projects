@@ -51,3 +51,11 @@ while game_is_on:
  ## Create another paddle
 
 將 paddle class 化
+
+## Detect collision with wall and bounce
+
+球超越上邊界跟下邊界時反彈
+
+反彈:將移動量*(-1)
+
+球有大小所以要預留空間
