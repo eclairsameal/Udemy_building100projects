@@ -38,9 +38,11 @@ while game_is_on:
     # Detect when paddle misses (Disassemble for easy scoring)
     if ball.xcor() > 380:
         ball.reset_position()
+        scoreboard.l_get_point()
 
     if ball.xcor() < -380:
         ball.reset_position()
+        scoreboard.r_get_point()
 
 
 screen.exitonclick()
