@@ -33,6 +33,13 @@ while game_is_on:
         # print("a")
         ball.bounce_x()
 
+    # Detect when paddle misses (Disassemble for easy scoring)
+    if ball.xcor() > 380:
+        ball.reset_position()
+
+    if ball.xcor() < -380:
+        ball.reset_position()
+
 
 screen.exitonclick()
 

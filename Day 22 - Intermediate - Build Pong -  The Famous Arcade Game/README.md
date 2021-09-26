@@ -71,3 +71,10 @@ while game_is_on:
 ```
 ball.distance(r_paddle) < 50 and ball.xcor() > 320 or ball.distance(l_paddle) < 50 and ball.xcor() < -320
 ```
+
+## Detect when paddle misses
+
+ball.xcor() < -380 or ball.xcor() > 380 成立代表球漏接，要重新發球(往反方向)，
+
+* 上述判斷拆成2個 if 方便計分。
+
