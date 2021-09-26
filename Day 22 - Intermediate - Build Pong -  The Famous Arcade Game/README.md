@@ -47,4 +47,7 @@ while game_is_on:
     screen.update()
     time.sleep(0.1)
 ```
-    
+
+ ## Create another paddle
+
+將 paddle class 化
