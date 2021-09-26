@@ -2,7 +2,17 @@
 
 [Class-Inheritance](https://replit.com/@appbrewery/Class-Inheritance)
 
-## Scoreboard.class
+## Snake Game Part 2
+
+* Detect collision with food
+
+* Create a Scoreboard
+
+* Detect collision with wall
+
+* Detect collision with tail
+
+### Scoreboard.class
 
 ```python
 from turtle import Turtle
