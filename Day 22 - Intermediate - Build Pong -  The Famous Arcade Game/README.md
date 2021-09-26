@@ -59,3 +59,15 @@ while game_is_on:
 反彈:將移動量*(-1)
 
 球有大小所以要預留空間
+
+## Detect collision with paddle
+
+直覺: ball.distance(r_paddle) < 20 -> 判斷為碰撞，但ball.distance(r_paddle)是算中心點之間的距離，所以邊緣的碰撞的話，ball.distance(r_paddle) 會大於20。
+
+* 修改判斷: 當球經過 x 的某一點，並且距離在50以內，也算碰撞。
+
+* 340 -> 320 讓反彈更自然
+
+```
+ball.distance(r_paddle) < 50 and ball.xcor() > 320 or ball.distance(l_paddle) < 50 and ball.xcor() < -320
+```
