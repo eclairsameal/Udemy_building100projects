@@ -30,3 +30,10 @@ turtle.mainloop()
 4. Use a loop to allow the user to keep guessing
 5. Record the correct guesses in a list
 6. Keep track of the score
+
+### 取值
+用 item() 只取值 
+```python
+self.write(correct_state.state, align="left", font=FONT) # 會有其他資料
+self.write(correct_state.state.item(), align="left", font=FONT)
+```
