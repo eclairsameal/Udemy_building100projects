@@ -22,7 +22,7 @@ turtle.mainloop()
 # screen.exitonclick() # The program will exit after clicking the mouse(按下滑鼠後會結束程式)
 ```
 
-### Target
+### Part 2: Target
 
 1. Convert(轉換) the guess to Title case
 2. Check if the guess is among the 50 states
