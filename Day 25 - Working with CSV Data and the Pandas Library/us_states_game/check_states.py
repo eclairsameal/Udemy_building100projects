@@ -27,9 +27,10 @@ class CheckStates(Turtle):
             #self.write(correct_state.state.item(), align="left", font=FONT)
 
     def output_missing_states(self):
-        missing_states = []
-        for state in self.all_states:
-            if state not in self.guessed_states:
-                missing_states.append(state)
+        # missing_states = []
+        # for state in self.all_states:
+        #     if state not in self.guessed_states:
+        #         missing_states.append(state)
+        missing_states = [state for state in self.all_states if state not in self.guessed_states]
         new_data = pandas.DataFrame(missing_states)
         new_data.to_csv("states_to_learn.csv")
