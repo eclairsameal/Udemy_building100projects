@@ -19,10 +19,13 @@ def star_timer():
     count_down_time = 0
     if reps == 8:
         count_down_time = LONG_BREAK_MIN
+        lable_title.config(text="Break", fg=RED)
     elif reps % 2 == 0:
         count_down_time = SHORT_BREAK_MIN
+        lable_title.config(text="Break", fg=PINK)
     else:
         count_down_time = WORK_MIN
+        lable_title.config(text="Work", fg=GREEN)
     count_down(count_down_time * 60)
 
     # ---------------------------- COUNTDOWN MECHANISM ------------------------------- #
