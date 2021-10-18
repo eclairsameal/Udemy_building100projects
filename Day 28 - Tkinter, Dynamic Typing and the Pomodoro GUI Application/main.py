@@ -1,4 +1,5 @@
 from tkinter import *
+import math
 # ---------------------------- CONSTANTS ------------------------------- #
 PINK = "#e2979c"
 RED = "#e7305b"
@@ -13,11 +14,12 @@ LONG_BREAK_MIN = 20
 
 # ---------------------------- TIMER MECHANISM ------------------------------- # 
 def star_timer():
-    count_down(5)
+    count_down(5 * 60)
 # ---------------------------- COUNTDOWN MECHANISM ------------------------------- # 
 def count_down(count):
     # print(count)
-    canvas.itemconfig(timer_text, text=count)
+    min, sec = divmod(count, 60)
+    canvas.itemconfig(timer_text, text=f"{min}:{sec}")
     if count > 0:
         window.after(1000, count_down, count - 1)
 

@@ -17,6 +17,8 @@
 
 ### tk.after(ms, function_name, *parameter)
 
+http://tcl.tk/man/tcl8.6/TclCmd/after.htm
+
 過了特定毫秒後執行此function
 
 ```python
