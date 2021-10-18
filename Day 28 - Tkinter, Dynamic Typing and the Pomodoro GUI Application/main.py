@@ -10,8 +10,15 @@ WORK_MIN = 25
 SHORT_BREAK_MIN = 5
 LONG_BREAK_MIN = 20
 reps = 0
+timer = None
 # ---------------------------- TIMER RESET ------------------------------- # 
-
+def reset_fimer():
+    window.after_cancel(timer)
+    canvas.itemconfig(timer_text, text="00:00")
+    lable_title.config(text="Timer")
+    lable_check.config(text="")
+    global reps
+    reps = 0
 # ---------------------------- TIMER MECHANISM ------------------------------- # 
 def star_timer():
     global reps
@@ -34,10 +41,15 @@ def count_down(count):
     min, sec = divmod(count, 60)
     canvas.itemconfig(timer_text, text="{:0>2d}:{:0>2d}".format(min, sec))
     if count > 0:
-        window.after(1000, count_down, count - 1)
+        global timer
+        timer = window.after(1000, count_down, count - 1)
     else:
         star_timer()  # 重啟計時器
-
+        marks = ""
+        work_sessions = math.floor((reps/2))
+        for _ in range(work_sessions):
+            marks += "✔"
+        lable_check.config(text=marks)
 # ---------------------------- UI SETUP ------------------------------- #
 window = Tk()
 window.title("Pomodoro")
@@ -47,7 +59,7 @@ window.config(padx=100, pady=50, bg=YELLOW)
 lable_title = Label(text="Timer", font=(FONT_NAME, 45, "bold"), bg=YELLOW, fg=GREEN)
 lable_title.grid(row=0, column=1)
 
-lable_check = Label(text="✔", font=(FONT_NAME, 12), bg=YELLOW, fg=GREEN)
+lable_check = Label(font=(FONT_NAME, 12), bg=YELLOW, fg=GREEN)
 lable_check.grid(row=3, column=1)
 
 # Canvas
@@ -60,7 +72,7 @@ canvas.grid(row=1, column=1)
 # Button
 button_star = Button(text="Start", highlightthickness=0, command=star_timer)  # call star_timer
 button_star.grid(row=2, column=0)
-button_reset = Button(text="Reset", highlightthickness=0)
+button_reset = Button(text="Reset", highlightthickness=0, command=reset_fimer)
 button_reset.grid(row=2, column=2)
 
 
