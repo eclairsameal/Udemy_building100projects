@@ -9,19 +9,31 @@ FONT_NAME = "Courier"
 WORK_MIN = 25
 SHORT_BREAK_MIN = 5
 LONG_BREAK_MIN = 20
-
+reps = 0
 # ---------------------------- TIMER RESET ------------------------------- # 
 
 # ---------------------------- TIMER MECHANISM ------------------------------- # 
 def star_timer():
-    count_down(10)
-# ---------------------------- COUNTDOWN MECHANISM ------------------------------- # 
+    global reps
+    reps += 1
+    count_down_time = 0
+    if reps == 8:
+        count_down_time = LONG_BREAK_MIN
+    elif reps % 2 == 0:
+        count_down_time = SHORT_BREAK_MIN
+    else:
+        count_down_time = WORK_MIN
+    count_down(count_down_time * 60)
+
+    # ---------------------------- COUNTDOWN MECHANISM ------------------------------- #
 def count_down(count):
     # print(count)
     min, sec = divmod(count, 60)
     canvas.itemconfig(timer_text, text="{:0>2d}:{:0>2d}".format(min, sec))
     if count > 0:
         window.after(1000, count_down, count - 1)
+    else:
+        star_timer()  # 重啟計時器
 
 # ---------------------------- UI SETUP ------------------------------- #
 window = Tk()
