@@ -29,3 +29,9 @@ def say_something(a, b, c):
     
 window.after(1000, say_something, 283, 765, 39)
 ```
+
+## Dynamic Typing
+
+通過變數改變變數型態
+
+[Is Python strongly typed?](https://stackoverflow.com/questions/11328920/is-python-strongly-typed)
