@@ -14,12 +14,12 @@ LONG_BREAK_MIN = 20
 
 # ---------------------------- TIMER MECHANISM ------------------------------- # 
 def star_timer():
-    count_down(5 * 60)
+    count_down(10)
 # ---------------------------- COUNTDOWN MECHANISM ------------------------------- # 
 def count_down(count):
     # print(count)
     min, sec = divmod(count, 60)
-    canvas.itemconfig(timer_text, text=f"{min}:{sec}")
+    canvas.itemconfig(timer_text, text="{:0>2d}:{:0>2d}".format(min, sec))
     if count > 0:
         window.after(1000, count_down, count - 1)
 
