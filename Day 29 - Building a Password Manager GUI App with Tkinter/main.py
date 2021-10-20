@@ -23,5 +23,14 @@ label_email.grid(row=2, column=0)
 label_password = Label(text="Password:", font=(FONT_NAME, 12))
 label_password.grid(row=3, column=0)
 
+# Entry
+entry_website = Entry(width=35)
+entry_website.grid(row=1, column=1, columnspan=2)
+entry_email = Entry(width=35)
+entry_email.grid(row=2, column=1, columnspan=2)
+entry_password = Entry(width=21)
+entry_password.grid(row=3, column=1)
+
+
 
 window.mainloop()
