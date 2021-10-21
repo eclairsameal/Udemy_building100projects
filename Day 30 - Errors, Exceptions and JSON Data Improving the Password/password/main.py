@@ -44,14 +44,20 @@ def save():
     if len(website) == 0 or len(password) == 0:
         messagebox.showinfo(title="Opps", message="Please make sure you haven't left any fields empty.")
     else:
-        with open("data.json", "r") as file:
-            # Reading old data
-            data = json.load(file)
+        try:
+            with open("data.json", "r") as file:
+                # Reading old data
+                data = json.load(file)
+        except FileNotFoundError:
+            with open("data.json", "w") as file:  # 創新的file
+                json.dump(new_data, file, indent=4)  # 將第一筆 new_data 寫入檔案
+        else:
             # Updating old data with new data
             data.update(new_data)
-        with open("data.json", "w") as file:
-            # Saving updated data
-            json.dump(data, file, indent=4)
+            with open("data.json", "w") as file:
+                # Saving updated data
+                json.dump(data, file, indent=4)
+        finally:
             entry_website.focus()
             entry_website.delete(0, END)  # 刪除文字(範圍), END = 字尾
             entry_email.delete(0, END)
