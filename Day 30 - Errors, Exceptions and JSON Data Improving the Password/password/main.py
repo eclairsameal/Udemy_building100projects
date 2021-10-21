@@ -2,6 +2,8 @@ from tkinter import *
 from tkinter import messagebox
 from random import randint, choice, shuffle
 import pyperclip
+import json
+
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
 # Password Generator Project
 def password_generator():
@@ -23,6 +25,8 @@ def password_generator():
     # print(f"Your password is: {password}")
     entry_password.insert(0, password)
     pyperclip.copy(password)
+
+
 # ---------------------------- SAVE PASSWORD ------------------------------- #
 
 def save():
@@ -30,22 +34,29 @@ def save():
     website = entry_website.get()
     email = entry_email.get()
     password = entry_password.get()
+    new_data = {
+        website: {
+            "email": email,
+            "password": password,
+        }
+    }
 
     if len(website) == 0 or len(password) == 0:
         messagebox.showinfo(title="Opps", message="Please make sure you haven't left any fields empty.")
     else:
-        is_ok = messagebox.askokcancel(title=website, message=f"These are the details entered: \nEmail: {email} "
-                                                      f"\nPassword: {password}\nIs it ok to save?")
-        if is_ok:
-            with open("data.txt", "a") as file:
-                string = website + " | " + email + " | " + password + "\n"
-                # print(string)
-                file.write(string)
-                entry_website.focus()
-                entry_website.delete(0, END)  # 刪除文字(範圍), END = 字尾
-                entry_email.delete(0, END)
-                entry_email.insert(0, "@gmail.com")
-                entry_password.delete(0, END)
+        with open("data.json", "r") as file:
+            # Reading old data
+            data = json.load(file)
+            # Updating old data with new data
+            data.update(new_data)
+        with open("data.json", "w") as file:
+            # Saving updated data
+            json.dump(data, file, indent=4)
+            entry_website.focus()
+            entry_website.delete(0, END)  # 刪除文字(範圍), END = 字尾
+            entry_email.delete(0, END)
+            entry_email.insert(0, "@gmail.com")
+            entry_password.delete(0, END)
 
 
 # ---------------------------- UI SETUP ------------------------------- #
@@ -82,6 +93,5 @@ button_password = Button(text="Generate Password", highlightthickness=0, command
 button_password.grid(row=3, column=2)
 button_add = Button(text="Add", width=45, command=save)
 button_add.grid(row=4, column=1, columnspan=2)
-
 
 window.mainloop()
