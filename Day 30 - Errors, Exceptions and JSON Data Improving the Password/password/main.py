@@ -4,6 +4,7 @@ from random import randint, choice, shuffle
 import pyperclip
 import json
 
+
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
 # Password Generator Project
 def password_generator():
@@ -65,6 +66,23 @@ def save():
             entry_password.delete(0, END)
 
 
+# ---------------------------- FIND PASSWORD ------------------------------- #
+def find_password():
+    website = entry_website.get()
+    try:
+        with open("data.json", "r") as file:
+            data = json.load(file)
+    except FileNotFoundError:
+        messagebox.showinfo(title="Error", message="No data file found.")
+    else:
+        if website in data:
+            email = data[website]["email"]
+            password = data[website]["password"]
+            messagebox.showinfo(title=website, message=f"Email: {email}\n Password: {password}\n")
+            pyperclip.copy(password)
+        else:
+            messagebox.showinfo(title="Error", message=f"No details for {website} exists.")
+
 # ---------------------------- UI SETUP ------------------------------- #
 window = Tk()
 window.title("Password Manager")
@@ -85,8 +103,8 @@ label_password = Label(text="Password:")
 label_password.grid(row=3, column=0)
 
 # Entry
-entry_website = Entry(width=45)
-entry_website.grid(row=1, column=1, columnspan=2)
+entry_website = Entry(width=28)
+entry_website.grid(row=1, column=1)
 entry_website.focus()
 entry_email = Entry(width=45)
 entry_email.grid(row=2, column=1, columnspan=2)
@@ -95,7 +113,9 @@ entry_password = Entry(width=28)
 entry_password.grid(row=3, column=1)
 
 # Button
-button_password = Button(text="Generate Password", highlightthickness=0, command=password_generator)
+button_search = Button(text="Search", highlightthickness=0, width=16, command=find_password)
+button_search.grid(row=1, column=2)
+button_password = Button(text="Generate Password", highlightthickness=0, width=16, command=password_generator)
 button_password.grid(row=3, column=2)
 button_add = Button(text="Add", width=45, command=save)
 button_add.grid(row=4, column=1, columnspan=2)
