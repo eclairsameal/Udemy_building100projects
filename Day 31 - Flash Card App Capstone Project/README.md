@@ -45,3 +45,17 @@ e.g. [Tkinter Reference Manual: .after() method](https://tcl.tk/man/tcl8.6/TclCm
 4. You can cancel a window.after() loop using window.after_cancel() 
 
 e.g. Tkinter Reference Manual: .after_cancel() method
+
+## Step 4 - Save Your Progress
+
+1. The remove() method can remove elements from a list. 
+
+e.g. https://www.w3schools.com/python/ref_list_remove.asp
+
+2. You can create a new csv file from a dictionary using DataFrame.to_csv() 
+
+e.g. https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.to_csv.html
+
+3. If you don't want to create an index for the new csv, you can set the index parameter to False. 
+
+e.g. data.to_csv("filename.csv", index=False)
