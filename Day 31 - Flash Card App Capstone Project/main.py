@@ -7,22 +7,34 @@ BACKGROUND_COLOR = "#B1DDC6"
 data = pandas.read_csv("data/french_words.csv")
 # print(data)
 to_learn = data.to_dict(orient="records")
-print(to_learn)
-
+# print(to_learn)
+current_card = {}  # 保存亂數出來的單字
 
 def next_card():
-    current = random.choice(to_learn)
-    canvas.itemconfig(label_title, text="French")
-    canvas.itemconfig(label_word, text=current["French"])
+    global current_card
+    current_card = random.choice(to_learn)
+    canvas.itemconfig(label_title, text="French", fill="Black")
+    canvas.itemconfig(label_word, text=current_card["French"], fill="Black")
+    canvas.itemconfig(card_background, image=img_front) # 要翻回白色
+
+def flip_card():
+    global current_card
+    canvas.itemconfig(label_title, text="English", fill="white")
+    canvas.itemconfig(label_word, text=current_card["English"], fill="white")
+    # img_back = PhotoImage(file="images/card_back.png")  xxx
+    canvas.itemconfig(card_background, image=img_back)
 
 window = Tk()
 window.title("Flashy")
 window.config(padx=50, pady=50, bg=BACKGROUND_COLOR)
 
+window.after(3000, flip_card) # 每 3 秒 將卡片翻面
+
 # Canvas
 canvas = Canvas(width=800, height=526)
 img_front = PhotoImage(file="images/card_front.png")
-canvas.create_image(400, 263, image=img_front)
+img_back = PhotoImage(file="images/card_back.png")  # 在function外才不會消失
+card_background = canvas.create_image(400, 263, image=img_front)
 canvas.config(bg=BACKGROUND_COLOR, highlightthickness=0)
 # Label in Canvas
 label_title = canvas.create_text(400, 150, text="", font=("Ariel", 40, "italic"))
