@@ -1,10 +1,10 @@
 import smtplib
 
-g_email = ""
-g_password = ""
+g_email = "sisypheanephyra@gmail.com"
+g_password = "work2019"
 
-y_email = ""
-y_password = ""
+y_email = "sisypheanephyra@yahoo.com"
+y_password = "sqjygmvhcunaqzjn"
 
 """
 connection = smtplib.SMTP("smtp.gmail.com", port=587)
