@@ -42,8 +42,13 @@ smtplib.SMTP("smtp.gmail.com", port=587)
 * unicodeencodeerror: 'ascii' codec can't encode characters in position 5-6: ordinal not in range(128)
 
 電腦名稱不是英文導致錯誤..... 
+
 :::
 
 ## Datetime
 
 [datetime - doc](https://docs.python.org/3/library/datetime.html)
+
+## Challenge 1 - Send Motivational Quotes on Mondays via Email
+
+偵伺今天是否是星期一，是的話寄一句話到信箱
