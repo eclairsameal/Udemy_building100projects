@@ -1,35 +1,13 @@
-import smtplib
+##################### Extra Hard Starting Project ######################
 
-g_email = ""
-g_password = ""
+# 1. Update the birthdays.csv
 
-y_email = ""
-y_password = ""
+# 2. Check if today matches a birthday in the birthdays.csv
 
-"""
-connection = smtplib.SMTP("smtp.gmail.com", port=587)
-connection.starttls()
-connection.login(user=g_email, password=g_password)
-connection.sendmail(
-    from_addr=g_email, 
-    to_addrs=y_email, 
-    msg="Subject:Hello\n\nThis is the body of my email.")
-connection.close()
-"""
-"""
-with smtplib.SMTP("smtp.gmail.com", port=587) as connection:
-    connection.starttls()
-    connection.login(user=g_email, password=g_password)
-    connection.sendmail(
-        from_addr=g_email, 
-        to_addrs=y_email, 
-        msg="Subject:Hello\n\nThis is the body of my email.")
-"""
+# 3. If step 2 is true, pick a random letter from letter templates and replace the [NAME] with the person's actual name from birthdays.csv
 
-with smtplib.SMTP("smtp.mail.yahoo.com", port=587) as  connection:
-    connection.starttls()
-    connection.login(user=y_email, password=y_password)
-    connection.sendmail(
-        from_addr=y_email, 
-        to_addrs=g_email, 
-        msg="Subject:Hello\n\nThis is the body of my email.")
+# 4. Send the letter generated in step 3 to that person's email address.
+
+
+
+
