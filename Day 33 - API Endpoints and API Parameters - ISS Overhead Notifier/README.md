@@ -33,6 +33,12 @@ print(response)
 
 [Reverse() Geocoding Convert Lat Long to Address(反向地理編碼將經緯度轉換為地址)](https://www.latlong.net/Show-Latitude-Longitude.html)
 
+**API 傳參數**
+
+```
+Endpoint ? Param Name = Value & .....
+```
+
 ## Kanye West quotes
 
 [kanye.rest](https://kanye.rest/)
