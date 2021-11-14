@@ -12,7 +12,7 @@ for question in question_data:
 
 
 quiz = QuizBrain(question_bank)
-quiz_ui = QuizInterface()
+quiz_ui = QuizInterface(quiz)  # 將建立的問題集傳給ui
 
 """
 quiz_ui 裡也有一個loop
