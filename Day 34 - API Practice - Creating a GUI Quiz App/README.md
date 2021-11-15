@@ -44,3 +44,53 @@ print(html.unescape('&pound;682m'))
 [Decode HTML entities in Python string?](https://stackoverflow.com/questions/2087370/decode-html-entities-in-python-string)
 
 ## UI Class
+
+* 設定寬，文字超出會換行
+* 
+* canvas 的 padding 在grid裡設定
+
+```python
+self.question_text = self.canvas.create_text(
+            150,
+            125,
+            width=280,  # 設定寬，文字超出會換行
+            text="question_text",
+            fill=THEME_COLOR,
+            font=("Arial", 20, "italic"))
+self.canvas.grid(row=1, column=0, columnspan=2, pady=50)
+```
+
+將Class 傳到另一個 Class中
+
+```python
+# main
+quiz_ui = QuizInterface(quiz)  # 將建立的問題集傳給ui
+
+# ui
+from quiz_brain import QuizBrain # 當在QuizInterface編輯程式時，可以有QuizBrain提示
+class QuizInterface:
+    def __init__(self, quiz_brain: QuizBrain):  # 先宣告傳入的資料是什麼型態，避免犯錯
+    ...
+
+```
+
+## 指定資料型態(Type Hints)
+
+```python
+age: int
+name: str
+height: float
+is_human: bool
+
+def police_check(age: int) -> bool:
+    if age > 18:
+        can_drive = True
+    else:
+        can_drive = False
+    return can_drive
+
+if police_check(12):
+    print("You may pass")
+else:
+    print("Pay a fine.")
+```
