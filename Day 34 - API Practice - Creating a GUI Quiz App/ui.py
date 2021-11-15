@@ -23,7 +23,7 @@ class QuizInterface:
             width=280,  # 設定寬，文字超出會換行
             text="question_text",
             fill=THEME_COLOR,
-            font=("Arial", 20, "italic"))
+            font=("Arial", 15, "italic"))
         self.canvas.grid(row=1, column=0, columnspan=2, pady=50)  # canvas 的 padding 在這設定
 
         # Button
@@ -41,11 +41,13 @@ class QuizInterface:
         self.window.mainloop()
 
     def get_next_question(self):
-        self.canvas.config(bg="white")  # 背景變回白色
-        q_text = self.quit.next_question()
-        self.label_score.config(text=f"Score:{self.quit.score}")  # 更新score
-        self.canvas.itemconfig(self.question_text, text=q_text)
-
+        if self.quit.still_has_questions():
+            self.canvas.config(bg="white")  # 背景變回白色
+            q_text = self.quit.next_question()
+            self.label_score.config(text=f"Score:{self.quit.score}")  # 更新score
+            self.canvas.itemconfig(self.question_text, text=q_text)
+        else:
+            self.canvas.itemconfig(self.question_text, text="You've reached the end of the quit.")
     def true_pressed(self):
         # is_right = self.quit.check_answer("True")
         # self.give_feedback(is_right)
