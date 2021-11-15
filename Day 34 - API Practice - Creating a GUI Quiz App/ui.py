@@ -41,11 +41,24 @@ class QuizInterface:
         self.window.mainloop()
 
     def get_next_question(self):
+        self.canvas.config(bg="white")  # 背景變回白色
         q_text = self.quit.next_question()
         self.canvas.itemconfig(self.question_text, text=q_text)
 
     def true_pressed(self):
-        self.quit.check_answer("True")
+        # is_right = self.quit.check_answer("True")
+        # self.give_feedback(is_right)
+        self.give_feedback(self.quit.check_answer("True"))
         
     def false_pressed(self):
-        self.quit.check_answer("False")
+        # is_right = self.quit.check_answer("False")
+        self.give_feedback(self.quit.check_answer("False"))
+    
+    def give_feedback(self, is_right):
+        if is_right:
+            self.canvas.config(bg="green")
+        else:
+            self.canvas.config(bg="red")
+        self.window.after(1000, self.get_next_question)  # 1秒後執行 self.get_next_question
+        
+        
