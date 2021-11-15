@@ -43,6 +43,7 @@ class QuizInterface:
     def get_next_question(self):
         self.canvas.config(bg="white")  # 背景變回白色
         q_text = self.quit.next_question()
+        self.label_score.config(text=f"Score:{self.quit.score}")  # 更新score
         self.canvas.itemconfig(self.question_text, text=q_text)
 
     def true_pressed(self):
