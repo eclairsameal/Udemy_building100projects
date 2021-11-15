@@ -94,3 +94,13 @@ if police_check(12):
 else:
     print("Pay a fine.")
 ```
+
+## 如何向 Tkinter 按鈕命令中傳遞引數
+
+[如何向 Tkinter 按鈕命令中傳遞引數](https://www.delftstack.com/zh-tw/howto/python-tkinter/how-to-pass-arguments-to-tkinter-button-command/)
+
+## after(ms, function)
+
+Tkinter root 視窗具有專用方法 after，此方法會在給定時間後呼叫函式(ms 是時間間隔，單位為 ms)。
+
+[如何在 Tkinter 中使用定時器](https://www.delftstack.com/zh-tw/howto/python-tkinter/how-to-use-a-timer-in-tkinter/)
