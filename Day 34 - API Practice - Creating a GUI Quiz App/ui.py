@@ -28,14 +28,15 @@ class QuizInterface:
 
         # Button
         true_img = PhotoImage(file="images/true.png")  # 使用圖片前要先載入
-        self.button_true = Button(image=true_img, highlightthickness=0)
+        self.button_true = Button(image=true_img, highlightthickness=0, command=self.true_pressed)
         self.button_true.grid(row=2, column=0)
 
         false_img = PhotoImage(file="images/false.png")  # 使用圖片前要先載入
-        self.button_false = Button(image=false_img, highlightthickness=0)
+        self.button_false = Button(image=false_img, highlightthickness=0, command=self.false_pressed)
         self.button_false.grid(row=2, column=1)
-
+        
         self.get_next_question()
+
 
         self.window.mainloop()
 
@@ -43,3 +44,8 @@ class QuizInterface:
         q_text = self.quit.next_question()
         self.canvas.itemconfig(self.question_text, text=q_text)
 
+    def true_pressed(self):
+        self.quit.check_answer("True")
+        
+    def false_pressed(self):
+        self.quit.check_answer("False")
