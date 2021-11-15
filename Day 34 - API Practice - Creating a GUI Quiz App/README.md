@@ -12,6 +12,9 @@ Day 17 有寫過文字版的問答遊戲，Day 34 的目標是利用api跟tkinte
 
 ```
 https://opentdb.com/api.php?amount=10&type=boolean
+
+# 有選擇題目分類(Science:Computers)
+https://opentdb.com/api.php?amount=10&category=18&type=boolean
 ```
 
 ```python
@@ -104,3 +107,9 @@ else:
 Tkinter root 視窗具有專用方法 after，此方法會在給定時間後呼叫函式(ms 是時間間隔，單位為 ms)。
 
 [如何在 Tkinter 中使用定時器](https://www.delftstack.com/zh-tw/howto/python-tkinter/how-to-use-a-timer-in-tkinter/)
+
+## 禁用button
+
+```python
+self.button_true.config(state="disabled")
+```
