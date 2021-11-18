@@ -4,12 +4,12 @@
 
 | No.   | Tittle | Topic | Project |
 | :---: | :---   | :---  | :---    |
-| 1  |      |   | |
-| 2  |      |   | |
-| 3  |      |   | |
-| 4  |      |   | |
-| 5  |      |   | |
-| 6  |      |   | |
+| 1  | Working with Variables in Python to Manage Data |   | |
+| 2  | Understanding Data Types and How to Manipulate Strings |   | |
+| 3  | Control Flow and Logical Operators | |
+| 4  | Randomisation and Python Lists |   | |
+| 5  | Python Loops |   | |
+| 6  | Python Functions & Karel |   | |
 | 7  | [Hangman](/Day-07) |   | |
 | 8  | [Function Parameters and Caesar Cipher](/Day-08) |   | |
 | 9  | [Dictionaries, Nesting and the Secret Auction](/Day-09) |   | |
